@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Project Team-15</title>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>COVID-19 Vaccinization Mini Project Team-15</h1>
+  <marquee>A Private Blockchain Web App for Vaccinize COVID-19 Vaccine</marquee>
+  <h3>Current Working Id : <span class="white"><span id="SenderBalance"></span></h3>
+  <marquee><h4>Team Members :  Vishwajeet Singh, Medha Shreyashi, Arjita Verma</h4></marquee>
+  
+    <div class="btn-group" id="form-selector" align="center">
+		
+		<button type="button" class="btn1 btn-selector active" id="sign-up-btn">Patient's Section</button>
+		<button type="button" class="btn1 btn-selector" id="log-in-btn">Patient's Details</button>
+		<button type="button" class="btn1 btn-selector" id="payments-btn">Patient's & Vaccine Details</button>
+		<button type="button" class="btn1 btn-selector" id="finance-btn">Loan Section</button>
+		
+	</div>
+	<div class="form" id="sign-up-form">
+		<h2 class="form-title">Enter the following Details </h2>
+		<input type="text" class="input-std" id="fid" placeholder="Enter Patient Id (Aadhar No.)">
+		<input type="text" class="input-std" id="fname" placeholder="Patient Name">
+		<input type="text" class="input-std" id="loc" placeholder="Patient Location">
+    <input type="text" class="input-std" id="contact" placeholder="Patient Phone Number">
+		<input type="text" class="input-std" id="crop" placeholder="Vaccine Name">
+		<input type="number" class="input-std" id="quantity" placeholder="No.of Vaccine Doses">
+		<input type="number" class="input-std" id="exprice" placeholder="Fees Amount (if any else enter 0)">
+		<button type="button" class="btn-submit" id="setvalue" onclick="set()">Submit Details!</button>
+	<span id="status"></span>
+	</div>
+	
+	 	
+  <div class="form" id="log-in-form">
+  <h2 class="form-title">Get Patient's Details</h2>
+		
+		
+  <br>
+  <table>  
+  <!-- <tr><td><b><label class = "black">Patient Id</label></td><td>:</td></b><td><span class="black" span id="getval1"></span></td></tr>  -->
+  <input type="text" class="input-std" id="fid1" placeholder="Patient Id (Aadhar No.)">
+  <tr><td><b><label class = "black">Name</label></td><td>:</td></b><td><span class="black" span id="getval2"></span></td></tr>
+  <tr><td><b><label class = "black">Address</label></td><td>:</td></b><td><span class="black" span id="getval3"></span></td></tr>
+  <tr><td><b><label class = "black">Vaccine Name</label></td><td>:</td></b><td><span class="black" span id="getval4"></span></td></tr>
+  <tr><td><b><label class = "black">Mobile No.</label></td><td>:</td></b><td><span class="black" span id="getval5"></span></td></tr>
+  <tr><td><b><label class = "black">No. of Dose</label></td><td>:</td></b><td><span class="black" span id="getval6"></span></td></tr>
+  <tr><td><b><label class = "black">Fee Paid</label><td>:</td></td></b><td><span class="black" span id="getval7"></span></td></tr>
+  
+  </table>  
+  <button type="button" class="btn-submit" id="getvalue" onclick="get();">Get Value</button>
+     
+  <br><br>
+ 
+<button type="button" class="btn-submit1" id="Approve-btn" align ="center" font="20px">Approve Details</button>
+  
+
+
+  <span id="status"></span>
+
+ </div>
+	
+
+<div class="form" id="approve-form">
+     <h2 class="form-title">Vaccine Details</h2>
+		<input type="text" class="input-std" id="lotno" placeholder="Enter the Vaccine ID">
+		<input type="text" class="input-std" id="grade" placeholder="Enter Vaccinated by">
+		<input type="text" class="input-std" id="mrp" placeholder="Enter the cost">
+		<input type="date" class="input-std" id="testdate" placeholder="Enter the Date of Dose">
+		<input type="date" class="input-std" id="expdate" placeholder="Enter the Next due date">
+		
+		<button type="button" class="btn-submit" id="setvalue" onclick="setQ()">Submit</button>
+			
+		<span id="status"></span>	
+
+  </div>
+  
+  
+  <div class="form" id="payments-form">
+   <h2 class="form-title">Patient's Vaccine Details</h2>
+  <table>  
+  <input type="text" class="input-std" id="getfid" placeholder="Enter the Patient Id (Aadhar No.)">
+  <tr><td><b><label class = "black">Patient Id</label></td><td>:</td></b><td><span class="black" span id="cgetval1"></span></td></tr>
+  <tr><td><b><label class = "black">Patient Name</label></td><td>:</td></b><td><span class="black" span id="cgetval2"></span></td></tr>
+  <tr><td><b><label class = "black">Location</label></td><td>:</td></b><td><span class="black" span id="cgetval3"></span></td></tr>
+  <tr><td><b><label class = "black">Vaccine Name</label></td><td>:</td></b><td><span class="black" span id="cgetval4"></span></td></tr>
+  <tr><td><b><label class = "black">Mobile No.</label></td><td>:</td></b><td><span class="black" span id="cgetval5"></span></td></tr>
+  <input type="text" class="input-std" id="lotnum" placeholder="Enter the Vaccine Id">
+  <tr><td><b><label class = "black">No. of Dose</label></td><td>:</td></b><td><span class="black" span id="cgetval6"></span></td></tr>
+  <tr><td><b><label class = "black">Batch No.</label><td>:</td></td></b><td><span class="black" span id="cgetval8"></span></td></tr>
+  <tr><td><b><label class = "black">Vaccine Cost</label><td>:</td></td></b><td><span class="black" span id="cgetval7"></span></td></tr>
+  <tr><td><b><label class = "black">Vaccinated by</label><td>:</td></td></b><td><span class="black" span id="cgetval9"></span></td></tr>
+  <tr><td><b><label class = "black">Total Cost</label><td>:</td></td></b><td><span class="black" span id="cgetval10"></span></td></tr>
+  <tr><td><b><label class = "black">Date of Dose</label><td>:</td></td></b><td><span class="black" span id="cgetval11"></span></td></tr>
+  <tr><td><b><label class = "black">Next Due Date</label><td>:</td></td></b><td><span class="black" span id="cgetval12"></span></td></tr>
+  </table>
+  <button type="button" class="btn-submit" id="getcustval" onclick="getQ();cgetQ();">Get Value</button>
+  </div>
+
+  <div class="form" id="finance-form">
+		<h2 class="form-title">Micro-Finance</h2>
+		
+
+		<input type="text" class="input-std" id="pfid" placeholder="Enter the Patient Id (Aadhar Id)">
+		<input type="text" class="input-std" id="lotnum" placeholder="Enter the Vaccine Id">
+		<input type="text" class="input-std" id="amount" placeholder="Enter the Loan Amount" value=0>
+		<table>
+		<tr><td><b><label class = "black">Total Balance</label></td><td>:</td></b><td><span class="black"><span class="black" span id="balance"></span>₹</span></td></tr>
+		
+		</table>
+		<button type="button" class="btn-submit" id="getfund" onclick="fund()">Transfer Fund</button>
+		
+	<span id="status"></span>
+	</div>
+
+  
+   <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+  
+</body>
+</html>
