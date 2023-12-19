@@ -1,7 +1,4 @@
 # Covid-19-Vaccinization
-To store record of Covid-19 Vaccinization and show details of patient and transfer mini loan amount instantly using blockchain technology.
-
-![1](https://user-images.githubusercontent.com/65709443/122388209-459a2380-cf8d-11eb-82d5-f2fc8316005b.jpg)
 
 **Blockchain-Powered COVID-19 Vaccinization & Instant Mini Loans Project 💉💸**<br>
 
@@ -27,3 +24,5 @@ This project aims to contribute to a future where technology serves as a catalys
 
 **🔒 Privacy and Security:**<br>
 Ensuring the privacy of individuals is a top priority. Our system is designed to comply with data protection regulations while harnessing the power of blockchain for secure and transparent record-keeping.
+
+![1](https://user-images.githubusercontent.com/65709443/122388209-459a2380-cf8d-11eb-82d5-f2fc8316005b.jpg)
